@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    *{
+ margin: 0;
+ padding: 0;
+ font-family: 微软雅黑;
+ font-size: 12px;
+}
+.box{
+ width: 390px;
+ height: 320px;
+ border: solid 1px #ddd;
+ background: #FFF;
+ position: absolute;
+ left: 50%;
+ top:42%;
+ margin-left: -195px;
+ margin-top: -160px;
+ text-align: center;
+}
+.box h2{
+ font-weight: normal;
+ color:#666;
+ font-size: 16px;
+ line-height: 40px;
+ overflow: hidden;
+ text-align: center;
+ border-bottom: solid 1px #ddd;
+ background: #f7f7f7;
+}
+.input_box{
+ width:350px;
+ padding-bottom: 15px;
+ margin: 0 auto;
+ overflow: hidden;
+}
+    </style>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="box">
+        <h2>登录</h2>
+        <div class="input_box">
+            <input id="user" type="text" name="user" placeholder="请输入用户名！">
+        </div>
+        <div class="input_box">
+            <input id="pass" type="password" name="pass" placeholder="请输入密码">
+        </div>
+        <div class="input_box">
+            <button type="button" class="btn btn-primary" onclick="login()">登录</button>
+            <a href="regist.html"><input type="button" class="btn btn-info" name="regist" value="注册"></a>
+        </div>
+    </div>
+    <script>
+        //登录
+        function login() {
+            //获取用户名和密码
+            var user = document.querySelector("#user").value
+            var pass = document.querySelector("#pass").value
+            // console.log(user)
+            // console.log(pass)
+            if (user === "mic" && pass ==="123" ) {
+                alert("登录成功！")
+            } else {
+                alert("用户名或密码不正确！")
+            }
+            
+        }
+    </script>
+</body>
+</html>
